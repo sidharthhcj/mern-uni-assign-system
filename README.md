@@ -99,8 +99,6 @@ npm run dev
 ---
 
 ## 📸 Future Improvements
-
-* Authentication system (JWT)
 * Assignment deadline management
 * Teacher grading system
 * Notifications for submission
