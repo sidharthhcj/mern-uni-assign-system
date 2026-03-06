@@ -7,7 +7,16 @@ const path = require("path");
 const app = express();
 
 // ── Middlewares ──────────────────────────────────────────────
-app.use(cors());
+// ── Middlewares ──────────────────────────────────────────────
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://mern-uni-assign-system.vercel.app"
+  ],
+  methods: ["GET","POST","PUT","DELETE"],
+  credentials: true
+}));
+
 app.use(express.json());
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
